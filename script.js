@@ -28,8 +28,14 @@ document.addEventListener('click', ()=>{ downloadMenu.classList.remove('show'); 
 window.addEventListener('scroll', ()=>{ downloadMenu.classList.remove('show'); });
 window.addEventListener('keydown', e=>{ if(e.key==="Escape") downloadMenu.classList.remove('show'); });
 
-const scrollElements = document.querySelectorAll('.science, .science-card, .reviews-main, .review-item, .team-header, .team-member, .faq-header, .faq-item, .cta-section');
+const scrollElements = document.querySelectorAll(
+  '.science, .science-card, .reviews, .reviews-inner, .reviews-main, .review-item, .team-header, .team-member, .faq-header, .faq-item, .cta-section'
+);
 
+// Add scroll-reveal class to each element
+scrollElements.forEach(el => el.classList.add('scroll-reveal'));
+
+// Intersection Observer to add .active on scroll
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if(entry.isIntersecting) {
@@ -39,5 +45,49 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.15 });
 
-scrollElements.forEach(el => el.classList.add('scroll-reveal'));
+// Observe all elements
 scrollElements.forEach(el => observer.observe(el));
+
+
+const ctx = document.getElementById('muscleRadar').getContext('2d');
+
+new Chart(ctx, {
+    type: 'radar',
+    data: {
+        labels: ['', '', '', '', '', ''],
+        datasets: [{
+            label: 'Program Intensity',
+            data: [80, 70, 60, 50, 90, 65],
+            backgroundColor: 'rgba(255,255,255,0.1)',
+            borderColor: '#fff',
+            borderWidth: 2,
+            pointBackgroundColor: '#fff',
+            pointRadius: 4,
+            pointHoverRadius: 6
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            r: {
+                angleLines: { color: 'rgba(255,255,255,0.2)' },
+                grid: { color: 'rgba(255,255,255,0.1)' },
+                suggestedMin: 0,
+                suggestedMax: 100,
+                ticks: {
+                    display: false
+                },
+                pointLabels: {
+                    color: '#aaa',
+                    font: {
+                        size: 12
+                    }
+                }
+            }
+        },
+        plugins: {
+            legend: { display: false }
+        }
+    }
+});

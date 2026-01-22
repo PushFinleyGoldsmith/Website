@@ -6,6 +6,7 @@
   <title>Push – Build Muscle Faster</title>
   <link rel="icon" href="/src/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -45,8 +46,18 @@
   </div>
 
   <div class="science-content">
+
     <div class="science-card">
-      <div class="app-preview"></div>
+      <div class="app-preview graph">
+        <div class="graph-bars">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="preview-label">Weekly Volume ↑</div>
+      </div>
+
       <h3>Smart Progression</h3>
       <p>
         Tracks and adjusts volume and intensity
@@ -55,24 +66,41 @@
     </div>
 
     <div class="science-card">
-      <div class="app-preview"></div>
+      <div class="app-preview radar-chart">
+         <canvas id="muscleRadar" width="180" height="180"></canvas>
+        <div class="preview-label">Muscle Groups Covered</div>
+      </div>
+      
       <h3>Evidence-Based Programs</h3>
       <p>
-        Built from peer-reviewed hypertrophy
-        and strength research.
+        Tracks your performance and adapts programs scientifically to ensure optimal gains.
       </p>
     </div>
 
     <div class="science-card">
-      <div class="app-preview"></div>
+      <div class="app-preview macros">
+        <div class="macro-rings">
+          <span></span>
+        </div>
+
+        <div class="macro-legend">
+          <div><span class="dot protein"></span> Protein</div>
+          <div><span class="dot carbs"></span> Carbs</div>
+          <div><span class="dot fat"></span> Fat</div>
+        </div>
+
+        <div class="preview-label">Macros Adjust Daily</div>
+      </div>
       <h3>Intelligent Nutrition Tracking</h3>
       <p>
-        Tracks calories and macros in real time, adapting targets to your
-        training load, recovery, and physique goals.
+        Tracks calories and macros in real time, adapting targets
+        to your training load and recovery.
       </p>
     </div>
+
   </div>
 </section>
+
 
 <section class="reviews" id="reviews">
   <div class="reviews-inner">
@@ -89,23 +117,23 @@
     <div class="reviews-side">
       <div class="review-item">
         <p>
-          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.”
+          “Push keeps me motivated and consistent at the gym. Simple to use and great for tracking progress.”
         </p>
-        <span>Person 1. · Powerlifter</span>
+        <span>Jack P. · Push User</span>
       </div>
 
       <div class="review-item">
         <p>
-          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.”
+          “Clean design, easy workouts, and effective results. One of the best gym apps I’ve used.”
         </p>
-        <span>Person 2. · Push User</span>
+        <span>Jasper L. · Push User</span>
       </div>
 
       <div class="review-item">
         <p>
-          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.”
+          “Push makes working out easier and more organized. Perfect for staying on track.”
         </p>
-        <span>Person 3. · Strength Training</span>
+        <span>Sam K. · Push User</span>
       </div>
     </div>
 
@@ -123,7 +151,6 @@
 
   <div class="team-members">
     <div class="team-member">
-      <div class="avatar"></div>
       <div class="member-info">
         <h3>Finley Goldsmith</h3>
         <span>Director of Push</span>

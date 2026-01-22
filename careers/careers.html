@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Push – Careers</title>
+  <link rel="icon" href="/src/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="careers.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">
+      <img src="/src/Push - Media Logo Dumbell.png" alt="Push Logo" />
+    </div>
+    <div class="nav-links">
+      <a href="/index/index.html">Home</a>
+      <a href="#jobsSection">Careers</a>
+    </div>
+  </nav>
+
+  <main class="careers-hero">
+    <h1>Careers at Push</h1>
+    <p>Join the team building the future of training.</p>
+    <button class="cta" id="openJobsBtn">View Open Positions</button>
+  </main>
+
+  <section class="jobs-section" id="jobsSection">
+    <div class="jobs-header">
+      <h2>Open Positions</h2>
+      <p>Select a role to view details and apply.</p>
+    </div>
+    <div class="jobs-grid" id="jobsGrid"></div>
+  </section>
+
+  <div class="modal-overlay" id="jobModal">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">×</button>
+
+      <div class="modal-header">
+        <h2 id="jobTitle"></h2>
+        <p id="jobDesc"></p>
+      </div>
+
+      <div class="modal-details">
+        <h3>Responsibilities</h3>
+        <ul id="jobResp"></ul>
+
+        <h3>Requirements</h3>
+        <ul id="jobReq"></ul>
+      </div>
+
+      <form class="apply-form" id="applyForm">
+        <h3>Apply Now</h3>
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="text" name="discord" placeholder="Discord ID" required />
+        <textarea name="message" placeholder="Tell us why you are interested in the position" required></textarea>
+        <button type="submit" class="cta-footer">Submit Application</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-line"></div>
+      <div class="footer-content">
+        <p>&copy; 2026 Push</p>
+        <p>
+          <a href="/privacy/privacy.html">Privacy Policy</a> | 
+          <a href="/terms/terms.html">Terms of Service</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="careers.js"></script>
+</body>
+</html>

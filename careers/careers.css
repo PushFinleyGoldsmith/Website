@@ -415,3 +415,122 @@ body { font-family:'Montserrat',sans-serif; background:#000; color:#fff; }
     opacity: 1;
   }
 }
+
+/* =========================
+   CAREERS – MOBILE FIXES
+   ========================= */
+@media (max-width: 900px) {
+
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* ---------- NAVBAR ---------- */
+  .navbar {
+    min-width: unset;
+    width: calc(100% - 24px);
+    padding: 10px 16px;
+    gap: 16px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  /* ---------- HERO ---------- */
+  .careers-hero {
+    padding: 0 20px;
+  }
+
+  .careers-hero h1 {
+    font-size: 42px;
+  }
+
+  .careers-hero p {
+    font-size: 15px;
+  }
+
+  /* ---------- JOBS SECTION ---------- */
+  .jobs-section {
+    padding: 120px 6vw;
+  }
+
+  .jobs-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* ---------- JOB CARD ---------- */
+  .job-card {
+    padding: 24px;
+  }
+
+  /* ---------- MODAL ---------- */
+  .modal {
+    width: calc(100% - 32px);
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+    padding: 24px;
+  }
+
+  .modal-header h2 {
+    font-size: 22px;
+  }
+
+  .modal-header p {
+    font-size: 14px;
+  }
+
+  .modal-details h3 {
+    font-size: 15px;
+  }
+
+  .modal-details ul {
+    font-size: 14px;
+  }
+
+  /* ---------- APPLY FORM ---------- */
+  .apply-form {
+    gap: 12px;
+  }
+
+  .apply-form input,
+  .apply-form textarea {
+    font-size: 14px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .footer {
+    padding: 64px 6vw 32px 6vw;
+  }
+
+  .footer-line {
+    width: 100%;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+  .careers-hero h1 {
+    font-size: 36px;
+  }
+
+  .careers-hero p {
+    font-size: 14px;
+  }
+
+  .cta {
+    font-size: 15px;
+    padding: 12px 28px;
+  }
+
+  .modal-close {
+    font-size: 24px;
+  }
+}

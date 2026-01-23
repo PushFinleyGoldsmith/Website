@@ -275,3 +275,91 @@ body {
 section {
   scroll-margin-top: 120px;
 }
+
+/* =========================
+   PRIVACY + TERMS – MOBILE FIXES
+   ========================= */
+@media (max-width: 900px) {
+
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* ---------- NAVBAR ---------- */
+  .navbar {
+    min-width: unset;
+    width: calc(100% - 24px);
+    padding: 10px 16px;
+    gap: 16px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a,
+  .nav-btn {
+    font-size: 13px;
+  }
+
+  /* ---------- HERO ---------- */
+  .privacy-hero {
+    padding: 140px 20px 48px;
+  }
+
+  .privacy-hero h1 {
+    font-size: 42px;
+  }
+
+  .privacy-hero p {
+    font-size: 14px;
+  }
+
+  /* ---------- CONTENT ---------- */
+  .privacy-content {
+    padding: 0 20px 120px;
+    gap: 48px;
+    text-align: left;
+  }
+
+  .privacy-section h2 {
+    font-size: 26px;
+  }
+
+  .privacy-section p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .footer {
+    padding: 64px 6vw 32px 6vw;
+  }
+
+  .footer-line {
+    width: 100%;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+  .privacy-hero h1 {
+    font-size: 36px;
+  }
+
+  .privacy-section h2 {
+    font-size: 22px;
+  }
+
+  .privacy-section p {
+    font-size: 13.5px;
+  }
+
+  .footer-content p {
+    font-size: 13px;
+  }
+}
+
+

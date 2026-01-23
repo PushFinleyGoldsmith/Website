@@ -900,3 +900,125 @@ section {
   font-size: 13px;
   color: #888;
 }
+
+/* =========================
+   MOBILE RESPONSIVE FIXES
+   ========================= */
+@media (max-width: 900px) {
+
+  /* Prevent horizontal scrolling */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* ---------- NAVBAR ---------- */
+  .navbar {
+    min-width: unset;
+    width: calc(100% - 24px);
+    padding: 10px 16px;
+    gap: 16px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a,
+  .nav-btn {
+    font-size: 13px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    padding: 0 20px;
+  }
+
+  .hero p br {
+    display: none;
+  }
+
+  /* ---------- SCIENCE SECTION ---------- */
+  .science {
+    padding: 120px 6vw;
+  }
+
+  .science-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .app-preview {
+    height: 240px;
+  }
+
+  /* ---------- REVIEWS ---------- */
+  .reviews {
+    padding: 120px 6vw;
+  }
+
+  .reviews-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .reviews-main {
+    text-align: center;
+  }
+
+  .reviews-quote {
+    font-size: 20px;
+  }
+
+  /* ---------- TEAM ---------- */
+  .team {
+    padding: 120px 6vw;
+  }
+
+  .team-members {
+    gap: 32px;
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq {
+    padding: 120px 6vw;
+  }
+
+  .faq-header {
+    margin-bottom: 48px;
+  }
+
+  /* ---------- CTA ---------- */
+  .cta-section {
+    padding: 100px 6vw;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .footer {
+    padding: 64px 6vw 32px 6vw;
+  }
+
+  .footer-line {
+    width: 100%;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .reviews-quote {
+    font-size: 18px;
+  }
+
+  .faq-question {
+    font-size: 15px;
+  }
+}
+

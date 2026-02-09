@@ -130,7 +130,6 @@ document.getElementById("applyForm").addEventListener("submit", async (e) => {
               { name: "Role", value: jobTitle.textContent },
               { name: "Name", value: formData.get("name"), inline: true },
               { name: "Email", value: formData.get("email"), inline: true },
-              { name: "Discord", value: formData.get("discord"), inline: true },
               { name: "Message", value: formData.get("message") || "—" }
             ],
             timestamp: new Date().toISOString()
@@ -214,3 +213,4 @@ scrollElements.forEach(el => observer.observe(el));
 window.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".careers-hero").classList.add("active");
 });
+

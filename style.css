@@ -445,8 +445,7 @@ body {
 
 .member-info {
   width: 100%;
-  height: 160px;                 /* forces all cards same height */
-  padding: 24px;
+  padding: 18px 20px; 
 
   display: flex;
   flex-direction: column;
@@ -1053,5 +1052,6 @@ section {
     font-size: 15px;
   }
 }
+
 
 
